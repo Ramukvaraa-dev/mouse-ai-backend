@@ -6,6 +6,9 @@ app = Flask(__name__)
 
 API_KEY = os.getenv("GOOGLE_API_KEY")
 
+@app.route("/")
+def home():
+    return "Mouse AI backend is running!"
 
 @app.route("/chat", methods=["POST"])
 def chat():
